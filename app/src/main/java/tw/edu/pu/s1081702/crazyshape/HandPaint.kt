@@ -23,9 +23,6 @@ class HandPaint(context: Context?, attrs: AttributeSet?) : View(context, attrs) 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         canvas.drawColor(Color.BLACK)  //背景
-        canvas.drawRect(200f,200f,400f,600f,paint)
-        path.moveTo(500f,800f)
-        path.lineTo(500f,1200f)
-        path.lineTo(700f,1000f)
+        canvas.drawPath(path, paint)
     }
 }
