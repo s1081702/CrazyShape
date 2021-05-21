@@ -4,18 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imgNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="28dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/imgTitle"
+        app:srcCompat="@drawable/square"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="530dp"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imgTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/imgNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgNext"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/square" />
+        app:layout_constraintVertical_chainStyle="spread"
+        app:srcCompat="@drawable/cover"
+        tools:ignore="MissingConstraints"
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>
